@@ -15,7 +15,7 @@ class CursoMigration extends Migration
         Schema::create('cursos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('titulo');
-            $table->string('description');
+            $table->string('descripcion');
             $table->integer('valor');
             $table->integer('profesor_id')->unsigned();
             $table->foreign('profesor_id')->references('id')->on('profesores');
